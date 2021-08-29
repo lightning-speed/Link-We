@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="static/ui/default_ui.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <title>Link We</title>
+    
+    <!-- Google Stuff-->
+    <script defer src="/__/firebase/8.7.0/firebase-app.js"></script>
+    <script defer src="/__/firebase/8.7.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.7.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.7.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.7.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
+    <!-- END google stuff-->
+    </head>
+    <script src="static/internal/app.js"></script>
+    <script src="static/internal/io.js"></script>
+    <body onload="load_app()" id="bod">
+     <div id="pre_block" style="margin: 0 0;width: 100%;height: 100%;" >
+      <button style="margin: 0 0;width: 100%;height: 100%;border: none;outline: none;">
+      <img id="splash" style="transition: 1s ease;" src="static/assets/icon.png" width="300px" height="300px">
+      <p style="font-size: 17px;">Link We</p>
+      </button> 
+     </div>
+     <div id="main_block"style="margin: 0 0;width: 100%;height: 100%;"hidden=true>
+      <p style="margin: 12px;font-size: 25px;">Link We<span style="font-size: 12px;"><span> </span>   shorter links for you<span></p>
+        <hr>
+        <br>
+        <br>
+        <input type="text" placeholder="Enter the big link here" id="big_link_input">
+        <button id="gen_link_btn" onclick="genrate_link(big_link_input.value);">Genrate a shorter link</button>
+        <button id="statusR"onclick="copyT()">1</button>
+     </div>
+    </body>
+</html>
